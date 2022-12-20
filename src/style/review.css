@@ -1,0 +1,27 @@
+.review-rate-title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1;
+}
+.review-rate {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+.review-rate-green {
+  color: #449f42;
+}
+.review-info {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+}
+.review-content {
+  height: 65px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+.review-item {
+  padding: 20px 12px !important;
+}

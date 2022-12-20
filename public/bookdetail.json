@@ -1,0 +1,78 @@
+{
+  "status": true,
+  "message": "책을 조회했습니다.",
+  "code": "OK",
+  "bookInfo": {
+    "seq": 30,
+    "price": 38000,
+    "title": "한 권으로 끝내는 JAVA",
+    "discount": "0%",
+    "delivery": "무료배송",
+    "regDt": "2010-02-25",
+    "publisherNo": 30,
+    "translatorNo": 2,
+    "sales": 190,
+    "textIntroduce": "이제는 말할 수 있다15",
+    "imageIntroduce": "nnn.jpg",
+    "translatorName": "김길동",
+    "autherName": "주시경",
+    "score": 1.0,
+    "discountPrice": 38000,
+    "point": 1900,
+    "reivewCount": 2,
+    "coverImage": "yuy.jpg",
+    "publisherName": "열린책들",
+    "rank": 3,
+    "introImageUri": "nnn",
+    "coverImageUri": "yuy"
+  },
+  "review": {
+    "List": {
+      "content": [
+        {
+          "reviewSeq": 15,
+          "reviewDate": "2022-12-19 02:43:40",
+          "reviewContent": "좋은 책입니다15",
+          "reviewSroce": 1,
+          "memberSeq": 15,
+          "bookSeq": 30,
+          "memberId": "user15"
+        },
+        {
+          "reviewSeq": 30,
+          "reviewDate": "2022-12-19 02:43:40",
+          "reviewContent": "좋은 책입니다15",
+          "reviewSroce": 1,
+          "memberSeq": 15,
+          "bookSeq": 30,
+          "memberId": "user30"
+        }
+      ],
+      "pageable": {
+        "sort": {
+          "empty": false,
+          "sorted": true,
+          "unsorted": false
+        },
+        "offset": 0,
+        "pageSize": 5,
+        "pageNumber": 0,
+        "unpaged": false,
+        "paged": true
+      },
+      "last": true,
+      "totalElements": 2,
+      "totalPages": 1,
+      "size": 5,
+      "number": 0,
+      "sort": {
+        "empty": false,
+        "sorted": true,
+        "unsorted": false
+      },
+      "first": true,
+      "numberOfElements": 2,
+      "empty": false
+    }
+  }
+}
