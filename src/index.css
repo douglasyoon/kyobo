@@ -4,6 +4,7 @@
 @import url("./style/GoodInfo.css");
 @import url("./style/listitem.css");
 @import url("./style/review.css");
+@import url("./style/pagination.css");
 a {
   color: #000;
   text-decoration: none;
