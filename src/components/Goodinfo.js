@@ -3,9 +3,17 @@ import { Link } from "react-router-dom";
 
 
 const Goodinfo = (props) => {
-
+// const[Auther,]
   
   const detailInfo = props.detailInfo;
+
+  
+  // const Auther = detailInfo.autherName
+
+  // if(Auther.length >= 10){
+  //   return Auther.substr(0,10)+"...";
+  // }
+ 
  
 //  if(detailInfo.autherName.length >=10){ 
 //   detailInfo.autherName.substr(0, 6) 
@@ -35,7 +43,7 @@ const Goodinfo = (props) => {
           </div>
       <h2 className="titleInfo">{detailInfo.title ? detailInfo.title: "No title"}</h2>
       <p className="MiniGray">
-       {detailInfo.autherName } | {detailInfo.publisherName ? detailInfo.publisherName: "No publisherName"} | {detailInfo.regDt}
+       {detailInfo.autherName} | {detailInfo.publisherName ? detailInfo.publisherName: "No publisherName"} | {detailInfo.regDt}
       </p>
       <p className="discount">
         {detailInfo.discount ? detailInfo.discount: "No discount"}  <span className="DiscountPrice">{detailInfo.discountPrice ? detailInfo.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",") : "NO discount"}</span>
@@ -56,8 +64,9 @@ const Goodinfo = (props) => {
 
       <div className="introdetail">
         
-        <img src={`http://haeji.mawani.kro.kr:8181/image/intro/${detailInfo.introImageUri}`} className="BookDetail" alt="상세페이지"></img>
-       
+        <img src={`http://haeji.mawani.kro.kr:8181/image/intro/${detailInfo.introImageUri}`}  className="BookDetail" alt="상세페이지"></img>
+       <p className="BookInfoTitle">책소개</p>
+       <p className="BookInfo"> {detailInfo.textIntroduce}</p>
       </div>
       
     </div>
