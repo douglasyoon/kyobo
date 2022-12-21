@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import instance from "../api/axios";
 import requests from "../api/request";
 import { useLocation } from "react-router";
-
 const Detail = () => {
   const location = useLocation();
   const paramList = new URLSearchParams(location.search);

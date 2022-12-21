@@ -1,0 +1,17 @@
+@import url("../index.css");
+.line{
+    display: inline-block;
+    width: 1000px;
+    
+    border-bottom: 1px solid rgba(30, 31, 32, 0.2);
+}
+.logo{
+    margin-top: 20px;
+    width: 174px;
+    height: 92px;
+}
+.subTitle{
+    font-weight: 700;
+   
+    
+}

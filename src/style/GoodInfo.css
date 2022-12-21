@@ -1,0 +1,112 @@
+@import url("../index.css");
+.total {
+  font-weight: 700;
+  width: 970px;
+
+  margin: 0 auto;
+  padding: 40px;
+}
+.introdetail {
+  width: 100%;
+  padding: 50px 50px;
+}
+.DiscountPrice {
+  color: #000;
+}
+.title {
+  width: 100%;
+  display: flex;
+}
+
+.title > ul > p {
+  line-height: 3;
+
+  border-bottom: 1px solid rgba(137, 207, 186, 0.3);
+}
+
+.BookTitle {
+  width: 475px;
+  height: 648px;
+  box-shadow: 20px 20px 90px rgba(137, 189, 167, 0.3);
+}
+.SalePrice {
+  margin-left: 10px;
+  font-size: 13px;
+  color: hsl(0, 0%, 0%, 0.3);
+  font-weight: 600;
+  text-decoration: line-through;
+}
+.info {
+  display: block;
+
+  padding-left: 20px;
+}
+.info {
+  width: 330px;
+  height: 57px;
+  margin: 0 50px;
+}
+.titleInfo {
+  display: block;
+  font-size: 28px;
+  font-weight: 800;
+  margin-top: 20px;
+}
+.titleList {
+  display: block;
+  list-style-type: none;
+}
+.titleList > ul {
+  display: block;
+  padding: 20px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.point {
+  margin-left: 200px;
+}
+.deliveryinfo {
+  margin-left: 150px;
+}
+
+.MiniGray {
+  font-size: 13px;
+  color: hsl(0, 0%, 0%, 0.3);
+  font-weight: 600;
+}
+
+.discount {
+  color: #4dac27;
+  font-weight: 700;
+}
+.Mini {
+  font-size: 14px;
+  font-weight: 700;
+}
+.Mini > span {
+  margin-left: 200px;
+}
+
+.Event > button {
+  font-size: 9px;
+  font-weight: 700;
+  border: none;
+  margin: 0 3px;
+  border-radius: 10%;
+  background: hsl(126, 36%, 84%, 0.6);
+  color: hsl(0, 0%, 0%, 0.6);
+}
+.Review {
+  margin-left: 180px;
+}
+.BookInfo{
+  padding: 20px 20px;
+  font-weight: 700;
+  border-top:  1px solid rgb(127, 145, 131,0.4);
+  
+
+}
+.BookInfoTitle{
+  font-weight: 700;
+  font-size: 19px;
+  padding: 20px 20px;
+}
