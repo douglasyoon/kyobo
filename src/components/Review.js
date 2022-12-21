@@ -1,27 +1,63 @@
 import ReviewItem from "./ReviewItem";
+import ReviewNoItem from "./ReviewNoItem";
+import requests from "../api/request";
+import instance from "../api/axios";
 import { useEffect, useState } from "react";
+import Pagination from "react-js-pagination";
 
 const Review = (props) => {
-  const review = props.review;
   const [reviews, setReviews] = useState([]);
-  useEffect(() => {
+  const [reviewPage, setReviewPage] = useState(1);
+  const [reviewPageInfo, setReviewPageInfo] = useState({});
+  const fetchData = async () => {
+    const params = {
+      seq: props.seq,
+      page: reviewPage - 1,
+    };
+    const resultReview = await instance.get(requests.fetchReview, { params });
+    const { content, totalPages, totalElements, size } = resultReview.data.List
+      ? resultReview.data.List
+      : {};
+    const reviewList = content ? content : "";
     const list =
-      review.content &&
-      review.content.map((item) => {
+      reviewList &&
+      reviewList.map((item) => {
         return <ReviewItem key={item.reviewSeq} reviewData={item} />;
       });
+    const pageInfo = { totalPages, totalElements, size };
     setReviews(list);
-  }, [review]);
+    setReviewPageInfo(pageInfo);
+  };
+  useEffect(() => {
+    fetchData();
+  }, [reviewPage]);
+  const handlePageChange = (page) => {
+    setReviewPage(page);
+  };
+
   return (
-    <div className="container">
-      <div className="container">
+    <div className="container review">
+      <div>
         <p className="review-rate-title">사용자 총점</p>
         <p className="review-rate">
-          <span className="review-rate-green">{props.score ? props.score : "0"}</span>/5 (
+          <span className="review-rate-green">{props.score ? props.score : "0"}</span>/10 (
           {props.count ? props.count : "0"})
         </p>
       </div>
-      <ul className="list-group list-group-flush">{reviews}</ul>
+      <ul className="list-group list-group-flush">{reviews ? reviews : <ReviewNoItem />}</ul>
+      {reviews ? (
+        <Pagination
+          activePage={reviewPage}
+          itemsCountPerPage={reviewPageInfo.size}
+          totalItemsCount={parseInt(reviewPageInfo.totalElements)}
+          pageRangeDisplayed={10}
+          prevPageText={"‹"}
+          nextPageText={"›"}
+          onChange={handlePageChange}
+        />
+      ) : (
+        ""
+      )}
     </div>
   );
 };

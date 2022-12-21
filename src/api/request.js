@@ -3,5 +3,6 @@ const requests = {
   // fetchDetail: "/bookdetail.json",
   fetchList: "/api/book/list",
   fetchDetail: "/api/book/detail",
+  fetchReview: "/api/review",
 };
 export default requests;

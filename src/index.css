@@ -1,20 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
-
 a {
   color: #000;
   text-decoration: none;
 }
-
 ul {
   list-style: none;
 }
-
 html {
   font-size: 16px;
   text-decoration: none;
 }
-
 body {
   margin: 0;
   padding: 0;
