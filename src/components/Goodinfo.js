@@ -10,9 +10,9 @@ const Goodinfo = (props) => {
     });
   };
   return (
-    <div className="container total">
-      <div className="title">
-        <div className="cover">
+    <div className="container px-4 total">
+      <div className="row title">
+        <div className="col cover">
           {detailInfo.coverImageUri ? (
             <img
               src={`http://haeji.mawani.kro.kr:8181/image/cover/${detailInfo.coverImageUri}`}
@@ -23,7 +23,7 @@ const Goodinfo = (props) => {
             ""
           )}
         </div>
-        <ul className="info">
+        <ul className="col info">
           <div className="event">
             <button type="button" className="btn btn-outline-light w-11 p-1">
               이벤트
@@ -38,7 +38,10 @@ const Goodinfo = (props) => {
           <div className="detail-bookinfo">
             <h2 className="titleinfo">{detailInfo.title ? detailInfo.title : "No title"}</h2>
             <p className="minigray">
-              <span>{detailInfo.autherName} 저자(글)</span>
+              <span>
+                {detailInfo.autherName} 저자(글)
+                {detailInfo.translatorName ? " · " + detailInfo.translatorName + " 번역" : ""}
+              </span>
               <span>
                 {detailInfo.publisherName ? detailInfo.publisherName : "No publisherName"} ·{" "}
                 {detailInfo.regDt}
@@ -77,7 +80,7 @@ const Goodinfo = (props) => {
             <span>리뷰평점</span>
             <span>
               <img className="clover-img" src={"/ico_clover.png"} />{" "}
-              {detailInfo.score ? detailInfo.score : "0"}
+              {detailInfo.score ? `${detailInfo.score} (${detailInfo.reivewCount})` : "0 (0)"}
             </span>
           </div>
         </ul>

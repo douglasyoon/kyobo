@@ -16,16 +16,11 @@
 }
 .title {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.cover {
-  width: calc(50% - 10px);
 }
 
 .booktitle {
-  height: 100%;
-  box-shadow: 0px 0px 20px #c7e2c8;
+  width: 100%;
+  box-shadow: 20px 20px 90px #eaeaea;
 }
 .saleprice {
   white-space: nowrap;
@@ -37,9 +32,6 @@
 .titleinfo {
   margin-top: 12px;
   font-weight: 700;
-}
-.info {
-  width: calc(50% - 10px);
 }
 
 .deliveryinfo {

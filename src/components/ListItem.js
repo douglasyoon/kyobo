@@ -4,13 +4,20 @@ import ConvertPrice from "../util/ConvertPrice";
 import "../style/TopButton.css";
 const ListItem = (props) => {
   const bookInfo = props.bookinfo;
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
+  // 작가 이름 처리
+  let authorName = "";
+  if (bookInfo.autherName.includes(",")) {
+    const [firstAuthorName] = bookInfo.autherName.split(",");
+    authorName = firstAuthorName + " 외";
+  } else {
+    authorName = bookInfo.autherName;
+  }
   return (
     <li>
       <div className="list-container">
@@ -28,7 +35,7 @@ const ListItem = (props) => {
             <Link to={`/detail?seq=${bookInfo.seq}`}>{bookInfo.title}</Link>
           </p>
           <p className="author">
-            {bookInfo.autherName} | {bookInfo.publisherName} | {bookInfo.regDt}
+            {authorName} · {bookInfo.publisherName} · {bookInfo.regDt}
           </p>
 
           <div className="list-num">
