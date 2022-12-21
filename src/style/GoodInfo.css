@@ -1,14 +1,15 @@
-@import url("../index.css");
 .total {
-  font-weight: 700;
+  position: relative;
   width: 970px;
-
   margin: 0 auto;
   padding: 40px;
 }
 .introdetail {
+  margin-top: 80px;
   width: 100%;
-  padding: 50px 50px;
+}
+.bookdetail {
+  width: 100%;
 }
 .DiscountPrice {
   color: #000;
@@ -49,7 +50,7 @@
 .titleInfo {
   display: block;
   font-size: 28px;
-  font-weight: 800;
+  font-weight: 700;
   margin-top: 20px;
 }
 .titleList {
@@ -61,7 +62,7 @@
   padding: 20px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.point {
+.title .point {
   margin-left: 200px;
 }
 .deliveryinfo {
@@ -98,15 +99,28 @@
 .Review {
   margin-left: 180px;
 }
-.BookInfo{
-  padding: 20px 20px;
-  font-weight: 700;
-  border-top:  1px solid rgb(127, 145, 131,0.4);
-  
-
+.detail-menu {
+  padding: 0 !important;
+  height: 43px;
+  margin-top: 80px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
 }
-.BookInfoTitle{
+.detail-menu-item {
+  display: inline-block;
+  font-size: 16px;
   font-weight: 700;
-  font-size: 19px;
-  padding: 20px 20px;
+  padding: 10px 0px;
+}
+.BookInfo {
+  margin-top: 30px;
+  font-weight: 400;
+}
+.BookInfoTitle {
+  border-top: 1px solid #eaeaea;
+  padding-top: 80px;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
 }

@@ -2,8 +2,8 @@ import ReviewItem from "./ReviewItem";
 import ReviewNoItem from "./ReviewNoItem";
 import requests from "../api/request";
 import instance from "../api/axios";
-import { useEffect, useState } from "react";
 import Pagination from "react-js-pagination";
+import { useEffect, useState } from "react";
 
 const Review = (props) => {
   const [reviews, setReviews] = useState([]);
@@ -37,6 +37,9 @@ const Review = (props) => {
 
   return (
     <div className="container review">
+      <div className="container review-menu">
+        <p className="review-menu-item">리뷰</p>
+      </div>
       <div>
         <p className="review-rate-title">사용자 총점</p>
         <p className="review-rate">
