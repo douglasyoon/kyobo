@@ -1,3 +1,9 @@
+@import url("../index.css");
+
+.review {
+  max-width: 970px;
+  padding: 0 !important;
+}
 .review-rate-title {
   font-size: 14px;
   font-weight: 700;
@@ -16,6 +22,25 @@
   font-weight: 400;
   line-height: 1;
 }
+.review-info > span:first-child {
+  margin-left: 0;
+}
+.review-info > span {
+  margin-left: 12px;
+}
+.review-info > span::after {
+  content: "";
+  position: relative;
+  display: inline-block;
+  margin-left: 12px;
+  width: 1px;
+  height: 7px;
+  vertical-align: 1px;
+  background: #d9d9d9;
+}
+.review-info > span:last-child:after {
+  content: none;
+}
 .review-content {
   height: 65px;
   font-size: 14px;
@@ -24,4 +49,52 @@
 }
 .review-item {
   padding: 20px 12px !important;
+}
+
+/* pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  gap: 12px;
+}
+ul.pagination li {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul.pagination li:first-child {
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+ul.pagination li:nth-child(2) {
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+ul.pagination li:nth-last-child(2) {
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+ul.pagination li:last-child {
+  border: 1px solid #cfcfcf;
+  border-radius: 50%;
+}
+ul.pagination li a {
+  text-decoration: none;
+  color: #767676;
+  font-size: 13px;
+}
+ul.pagination li.active a {
+  color: white;
+}
+ul.pagination li.active {
+  border-radius: 50%;
+  background: #4dac27;
 }

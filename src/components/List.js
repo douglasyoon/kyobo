@@ -7,6 +7,7 @@ const List = () => {
   const fetchData = async () => {
     const resultList = await instance.get(requests.fetchList);
     const item = resultList.data.list.content;
+    console.log(item);
     setBookList(item);
   };
   useEffect(() => {

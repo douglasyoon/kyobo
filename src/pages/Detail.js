@@ -9,15 +9,13 @@ const Detail = () => {
   const paramList = new URLSearchParams(location.search);
   const seqValue = paramList.get("seq");
   const [detailInfo, setDetailInfo] = useState([]);
-  const [review, setReview] = useState([]);
   const fetchData = async () => {
     const params = {
       seq: seqValue,
     };
     const resultDetail = await instance.get(requests.fetchDetail, { params });
-    const { bookInfo, review } = resultDetail.data;
+    const { bookInfo } = resultDetail.data;
     setDetailInfo(bookInfo);
-    setReview(review.List ? review.List : "");
   };
   useEffect(() => {
     fetchData();
@@ -25,7 +23,7 @@ const Detail = () => {
   return (
     <div>
       {<Goodinfo detailInfo={detailInfo} />}
-      {<Review review={review} score={detailInfo.score} count={detailInfo.reivewCount} />}
+      {<Review seq={seqValue} score={detailInfo.score} count={detailInfo.reivewCount} />}
     </div>
   );
 };
