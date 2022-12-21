@@ -24,8 +24,8 @@ const ListItem = (props) => {
 
           <div className="list-num">
             <p className="percent">{bookInfo.discount} </p>
-            <p className="price"> {bookInfo.discountPrice}원 </p>
-            <p className="dc-price"> {bookInfo.price}원 </p>
+            <p className="price"> {bookInfo.discountPrice? bookInfo.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','): "no price"}원 </p>
+            <p className="dc-price"> {bookInfo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}원 </p>
             <p className="point"> {bookInfo.point}p </p>
           </div>
 
@@ -42,7 +42,7 @@ const ListItem = (props) => {
           )}
         </div>
         <div className="list-bt">
-          <button className="list-info">세부 정보 보기</button>
+        <Link to={`/detail?seq=${bookInfo.seq}`}><button className="list-info">세부 정보 보기</button></Link>
         </div>
       </div>
     </li>

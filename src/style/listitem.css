@@ -6,6 +6,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 0;
+  border-bottom: 1px solid #f5f5f5;
 }
 
 .list-img {
@@ -79,6 +80,7 @@
   line-height: 18px;
   letter-spacing: -0.01em;
   text-decoration: line-through;
+  margin-left: 3px;
   color: #767676;
 }
 
