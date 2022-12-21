@@ -1,7 +1,7 @@
 @import url("../index.css");
 .total {
   font-weight: 700;
-  width: 970px;
+  max-width: 970px;
 
   margin: 0 auto;
   padding: 40px;
@@ -10,41 +10,51 @@
   width: 100%;
   padding: 50px 50px;
 }
-.DiscountPrice {
+.discountprice {
+  font-size: 24px;
   color: #000;
 }
 .title {
-  width: 100%;
+  width: 110%;
   display: flex;
 }
-
+.cover{
+  width: 100%;
+}
 .title > ul > p {
-  line-height: 3;
+  line-height: 4;
 
   border-bottom: 1px solid rgba(137, 207, 186, 0.3);
+  
 }
 
-.BookTitle {
+.booktitle {
   width: 475px;
   height: 648px;
   box-shadow: 20px 20px 90px rgba(137, 189, 167, 0.3);
 }
-.SalePrice {
-  margin-left: 10px;
-  font-size: 13px;
+.saleprice {
+ white-space: nowrap;
+  font-size: 14px;
   color: hsl(0, 0%, 0%, 0.3);
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: line-through;
+}
+.titleinfo{
+  font-weight: 700;
+  
 }
 .info {
   display: block;
-
-  padding-left: 20px;
-}
-.info {
-  width: 330px;
+ width: 200%;
   height: 57px;
   margin: 0 50px;
+  /* padding-left: 20px; */
+}
+
+.list-group-item {
+  width: 390px;
+  border: none;
 }
 .titleInfo {
   display: block;
@@ -61,14 +71,13 @@
   padding: 20px 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
-.point {
-  margin-left: 200px;
-}
+
 .deliveryinfo {
-  margin-left: 150px;
+  display: block;
+  text-align: right;
 }
 
-.MiniGray {
+.minigray {
   font-size: 13px;
   color: hsl(0, 0%, 0%, 0.3);
   font-weight: 600;
@@ -77,16 +86,10 @@
 .discount {
   color: #4dac27;
   font-weight: 700;
-}
-.Mini {
-  font-size: 14px;
-  font-weight: 700;
-}
-.Mini > span {
-  margin-left: 200px;
+  font-size: 24px;
 }
 
-.Event > button {
+.event > button {
   font-size: 9px;
   font-weight: 700;
   border: none;
@@ -95,18 +98,22 @@
   background: hsl(126, 36%, 84%, 0.6);
   color: hsl(0, 0%, 0%, 0.6);
 }
-.Review {
-  margin-left: 180px;
-}
-.BookInfo{
+
+.bookinfo {
   padding: 20px 20px;
   font-weight: 700;
-  border-top:  1px solid rgb(127, 145, 131,0.4);
-  
-
+  border-top: 1px solid rgb(127, 145, 131, 0.4);
+  line-height: 2.2;
 }
-.BookInfoTitle{
+.bookinfotitle {
   font-weight: 700;
   font-size: 19px;
   padding: 20px 20px;
+}
+.point{
+  display: flex;
+  justify-content: space-between;
+  line-height: 5;
+  border-bottom: 1px solid rgba(137, 207, 186, 0.3);
+  
 }
