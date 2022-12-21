@@ -1,5 +1,6 @@
 import "../style/GoodInfo.css";
 import "../style/TopButton.css";
+import ConvertPrice from "../util/ConvertPrice";
 const Goodinfo = (props) => {
   const detailInfo = props.detailInfo;
   const scrollToTop = () => {
@@ -45,26 +46,26 @@ const Goodinfo = (props) => {
             </p>
           </div>
           <p className="discount">
-            {detailInfo.discount ? detailInfo.discount : "No discount"}
+            {detailInfo.discount ? detailInfo.discount : "0"}
             {"  "}
             <span className="discountprice">
               {detailInfo.discountPrice
-                ? detailInfo.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                : "NO discount"}
+                ? ConvertPrice(detailInfo.discountPrice)
+                : "0"}원
               {"  "}
             </span>
             <span className="saleprice">
               {detailInfo.price
-                ? detailInfo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                : "NO price"}
+                ? ConvertPrice(detailInfo.price)
+                : "0"}원
             </span>
           </p>
           <div className="point">
             <span>적립</span>
             <span className="point-price">
               {detailInfo.point
-                ? detailInfo.point.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-                : "no point"}
+                ? ConvertPrice(detailInfo.point)
+                : "0"}
               p
             </span>
           </div>
@@ -102,9 +103,11 @@ const Goodinfo = (props) => {
         <p className="bookinfo"> {detailInfo.textIntroduce}</p>
       </div>
       <div className="scroll__container">
+       
         <button id="top" onClick={scrollToTop} type="button">
-          {" "}
+           
           Top
+         
         </button>
       </div>
     </div>

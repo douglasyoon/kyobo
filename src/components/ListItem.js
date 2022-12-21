@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
+import ConvertPrice from "../util/ConvertPrice";
+
+import "../style/TopButton.css";
 const ListItem = (props) => {
   const bookInfo = props.bookinfo;
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <li>
       <div className="list-container">
@@ -26,15 +36,15 @@ const ListItem = (props) => {
             <p className="price">
               {" "}
               {bookInfo.discountPrice
-                ? bookInfo.discountPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+                ? ConvertPrice(bookInfo.discountPrice)
                 : "no price"}
               원{" "}
             </p>
             <p className="dc-price">
               {" "}
-              {bookInfo.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원{" "}
+              {ConvertPrice(bookInfo.price)}원{" "}
             </p>
-            <p className="point"> {bookInfo.point}p </p>
+            <p className="point"> {bookInfo.point ? ConvertPrice(bookInfo.point) : "0"}p </p>
           </div>
 
           <span className="list-review">{bookInfo.textIntroduce}</span>
@@ -52,6 +62,12 @@ const ListItem = (props) => {
             <button className="list-info">세부 정보 보기</button>
           </Link>
         </div>
+      </div>
+      <div className="scroll__container">
+        <button id="top" onClick={scrollToTop} type="button">
+          {" "}
+          Top
+        </button>
       </div>
     </li>
   );
