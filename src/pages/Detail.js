@@ -1,10 +1,9 @@
 import Review from "../components/Review";
 import Goodinfo from "../components/Goodinfo";
-import { useEffect, useState } from "react";
 import instance from "../api/axios";
 import requests from "../api/request";
 import { useLocation } from "react-router";
-
+import { useEffect, useState } from "react";
 const Detail = () => {
   const location = useLocation();
   const paramList = new URLSearchParams(location.search);
@@ -23,8 +22,8 @@ const Detail = () => {
   }, []);
   return (
     <div>
-      {<Goodinfo detailInfo={detailInfo} />}
-      {<Review seq={seqValue} score={detailInfo.score} count={detailInfo.reivewCount} />}
+      <Goodinfo detailInfo={detailInfo} />
+      <Review seq={seqValue} score={detailInfo.score} count={detailInfo.reivewCount} />
     </div>
   );
 };

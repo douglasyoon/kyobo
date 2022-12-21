@@ -1,10 +1,22 @@
-@import url("../index.css");
-
 .review {
   max-width: 970px;
+  margin-top: 80px;
   padding: 0 !important;
 }
+.review-menu {
+  padding: 0 !important;
+  height: 43px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+}
+.review-menu .review-menu-item {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
 .review-rate-title {
+  margin-top: 30px;
   font-size: 14px;
   font-weight: 700;
   line-height: 1;
@@ -48,7 +60,12 @@
   line-height: 1;
 }
 .review-item {
+  border-bottom: 1px solid #eaeaea !important;
   padding: 20px 12px !important;
+}
+.review-item .clover-img {
+  width: 14px;
+  height: 14px;
 }
 
 /* pagination */

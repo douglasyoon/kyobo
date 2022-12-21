@@ -14,6 +14,7 @@ const List = () => {
     };
     const resultList = await instance.get(requests.fetchList, { params });
     const item = resultList.data.list.content;
+
     const { totalPages, totalElements, size } = resultList.data.list;
     setBookList(item);
     setListPageInfo({ totalPages, totalElements, size });

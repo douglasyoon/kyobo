@@ -1,0 +1,119 @@
+.total {
+  margin-top: 80px !important;
+  max-width: 970px;
+  padding: 0 !important;
+}
+.introdetail {
+  margin-top: 80px;
+  width: 100%;
+}
+.bookdetail {
+  width: 100%;
+}
+.discountprice {
+  font-size: 24px;
+  color: #000;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cover {
+  width: calc(50% - 10px);
+}
+
+.booktitle {
+  height: 100%;
+  box-shadow: 20px 20px 90px #eaeaea;
+}
+.saleprice {
+  white-space: nowrap;
+  font-size: 14px;
+  color: hsl(0, 0%, 0%, 0.3);
+  font-weight: 500;
+  text-decoration: line-through;
+}
+.titleinfo {
+  margin-top: 12px;
+  font-weight: 700;
+}
+.info {
+  width: calc(50% - 10px);
+}
+
+.deliveryinfo {
+  display: block;
+  text-align: right;
+}
+
+.minigray {
+  margin-top: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #656565;
+}
+
+.minigray > span {
+  display: block;
+}
+
+.total .discount {
+  color: #4dac27;
+  font-weight: 700;
+  font-size: 24px;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.event > button {
+  font-size: 9px;
+  font-weight: 700;
+  border: none;
+  margin: 0 3px;
+  border-radius: 10%;
+  background: hsl(126, 36%, 84%, 0.6);
+  color: hsl(0, 0%, 0%, 0.6);
+}
+
+.detail-bookinfo {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
+.bookinfo {
+  margin-top: 30px;
+  font-weight: 400;
+}
+.bookinfotitle {
+  border-top: 1px solid #eaeaea;
+  padding-top: 80px;
+  margin-top: 80px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+.detail-menu {
+  padding: 0 !important;
+  height: 43px;
+  margin-top: 80px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+}
+.detail-menu-item {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+.info .point {
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.point-price {
+  color: #4dac27;
+  font-weight: 700;
+}
