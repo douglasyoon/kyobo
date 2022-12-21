@@ -1,3 +1,4 @@
+
 import "../style/GoodInfo.css";
 import "../style/TopButton.css";
 
@@ -41,6 +42,7 @@ const Goodinfo = (props) => {
 
         <ul className="list-group info container">
           <div className="event container">
+
             <button type="button" className="btn btn-outline-light w-11 p-1">
               이벤트
             </button>
@@ -98,10 +100,6 @@ const Goodinfo = (props) => {
       </div>
 
       <div className="container introdetail">
-        {/* <img src={`http://haeji.mawani.kro.kr:8181/image/intro/${detailInfo.introImageUri}`} 
-        // onError= {(event) => event.target.style.display = 'none'} 
-         className="bookdetail container" 
-         alt="상세설명" ></img> */}
         {detailInfo.introImageUri ? (
           <img
             src={`http://haeji.mawani.kro.kr:8181/image/intro/${detailInfo.introImageUri}`}

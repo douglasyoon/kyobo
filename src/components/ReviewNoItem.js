@@ -1,5 +1,3 @@
-import "../style/review.css";
-
 const ReviewNoItem = () => {
   return (
     <li className="list-group-item review-item">
