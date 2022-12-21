@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import ConvertPrice from "../util/ConvertPrice";
 
 import "../style/TopButton.css";
+import ReplaceDate from "../util/ReplaceDate";
 const ListItem = (props) => {
   const bookInfo = props.bookinfo;
   const scrollToTop = () => {
@@ -35,22 +36,17 @@ const ListItem = (props) => {
             <Link to={`/detail?seq=${bookInfo.seq}`}>{bookInfo.title}</Link>
           </p>
           <p className="author">
-            {authorName} · {bookInfo.publisherName} · {bookInfo.regDt}
+            {authorName} · {bookInfo.publisherName} ·{" "}
+            {bookInfo.regDt ? ReplaceDate(bookInfo.regDt) : "0000.00.00"}
           </p>
 
           <div className="list-num">
             <p className="percent">{bookInfo.discount} </p>
             <p className="price">
               {" "}
-              {bookInfo.discountPrice
-                ? ConvertPrice(bookInfo.discountPrice)
-                : "no price"}
-              원{" "}
+              {bookInfo.discountPrice ? ConvertPrice(bookInfo.discountPrice) : "no price"}원{" "}
             </p>
-            <p className="dc-price">
-              {" "}
-              {ConvertPrice(bookInfo.price)}원{" "}
-            </p>
+            <p className="dc-price"> {ConvertPrice(bookInfo.price)}원 </p>
             <p className="point"> {bookInfo.point ? ConvertPrice(bookInfo.point) : "0"}p </p>
           </div>
 

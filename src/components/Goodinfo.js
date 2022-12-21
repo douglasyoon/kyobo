@@ -1,6 +1,7 @@
 import "../style/GoodInfo.css";
 import "../style/TopButton.css";
 import ConvertPrice from "../util/ConvertPrice";
+import ReplaceDate from "../util/ReplaceDate";
 const Goodinfo = (props) => {
   const detailInfo = props.detailInfo;
   const scrollToTop = () => {
@@ -44,7 +45,7 @@ const Goodinfo = (props) => {
               </span>
               <span>
                 {detailInfo.publisherName ? detailInfo.publisherName : "No publisherName"} ·{" "}
-                {detailInfo.regDt}
+                {detailInfo.regDt ? ReplaceDate(detailInfo.regDt) : "0000.00.00"}
               </span>
             </p>
           </div>
@@ -52,24 +53,16 @@ const Goodinfo = (props) => {
             {detailInfo.discount ? detailInfo.discount : "0"}
             {"  "}
             <span className="discountprice">
-              {detailInfo.discountPrice
-                ? ConvertPrice(detailInfo.discountPrice)
-                : "0"}원
-              {"  "}
+              {detailInfo.discountPrice ? ConvertPrice(detailInfo.discountPrice) : "0"}원{"  "}
             </span>
             <span className="saleprice">
-              {detailInfo.price
-                ? ConvertPrice(detailInfo.price)
-                : "0"}원
+              {detailInfo.price ? ConvertPrice(detailInfo.price) : "0"}원
             </span>
           </p>
           <div className="point">
             <span>적립</span>
             <span className="point-price">
-              {detailInfo.point
-                ? ConvertPrice(detailInfo.point)
-                : "0"}
-              p
+              {detailInfo.point ? ConvertPrice(detailInfo.point) : "0"}p
             </span>
           </div>
           <div className="point">
@@ -106,11 +99,8 @@ const Goodinfo = (props) => {
         <p className="bookinfo"> {detailInfo.textIntroduce}</p>
       </div>
       <div className="scroll__container">
-       
         <button id="top" onClick={scrollToTop} type="button">
-           
           Top
-         
         </button>
       </div>
     </div>

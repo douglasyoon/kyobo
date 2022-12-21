@@ -1,3 +1,5 @@
+import ReplaceDate from "../util/ReplaceDate";
+
 const ReviewItem = (props) => {
   const reviewData = props.reviewData;
   const star = [...Array(reviewData.reviewSroce)].map((n, i) => (
@@ -11,7 +13,8 @@ const ReviewItem = (props) => {
     <li className="list-group-item review-item">
       <p className="review-info">
         <span>{star}</span>
-        <span>{reviewData.memberId}</span> <span>{reviewDate}</span>
+        <span>{reviewData.memberId}</span>{" "}
+        <span>{reviewDate ? ReplaceDate(reviewDate) : "0000.00.00"}</span>
       </p>
       <p className="review-content">{reviewData.reviewContent}</p>
     </li>
