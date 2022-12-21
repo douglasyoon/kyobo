@@ -39,22 +39,13 @@ const ListItem = (props) => {
 
           <span className="list-review">{bookInfo.textIntroduce}</span>
 
-          
-
-            
-           
-            <div className="list-score">
-              <img className="clover-img" src={"/ico_clover.png"} />
-              <p className="clover-score"> {bookInfo.score ? bookInfo.score:"0"}</p>
-              <p className="clover-review">({bookInfo.reivewCount ? bookInfo.reivewCount: "0" }개의 리뷰)</p>
-            </div>
-       
-         
-
-      
-
-
-
+          <div className="list-score">
+            <img className="clover-img" src={"/ico_clover.png"} />
+            <p className="clover-score"> {bookInfo.score ? bookInfo.score : "0"}</p>
+            <p className="clover-review">
+              ({bookInfo.reivewCount ? bookInfo.reivewCount : "0"}개의 리뷰)
+            </p>
+          </div>
         </div>
         <div className="list-bt">
           <Link to={`/detail?seq=${bookInfo.seq}`}>
