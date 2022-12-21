@@ -1,14 +1,18 @@
-.line {
-  display: inline-block;
-  width: 1000px;
-
-  border-bottom: 1px solid rgba(30, 31, 32, 0.2);
+.header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  max-width: 970px;
+  height: 150px;
+  border-bottom: 1px solid #eaeaea;
 }
 .logo {
-  margin-top: 20px;
+  display: block;
   width: 174px;
   height: 92px;
 }
 .subTitle {
+  display: block;
   font-weight: 700;
 }

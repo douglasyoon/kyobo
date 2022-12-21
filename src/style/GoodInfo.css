@@ -1,10 +1,7 @@
 .total {
-  font-weight: 700;
+  margin-top: 80px !important;
   max-width: 970px;
-
-
-  margin: 0 auto;
-  padding: 40px;
+  padding: 0 !important;
 }
 .introdetail {
   margin-top: 80px;
@@ -18,61 +15,31 @@
   color: #000;
 }
 .title {
-  width: 110%;
-  display: flex;
-}
-.cover{
   width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
-.title > ul > p {
-  line-height: 4;
-
-  border-bottom: 1px solid rgba(137, 207, 186, 0.3);
-  
+.cover {
+  width: calc(50% - 10px);
 }
 
 .booktitle {
-  width: 475px;
-  height: 648px;
-  box-shadow: 20px 20px 90px rgba(137, 189, 167, 0.3);
+  height: 100%;
+  box-shadow: 20px 20px 90px #eaeaea;
 }
 .saleprice {
- white-space: nowrap;
+  white-space: nowrap;
   font-size: 14px;
   color: hsl(0, 0%, 0%, 0.3);
   font-weight: 500;
   text-decoration: line-through;
 }
-.titleinfo{
+.titleinfo {
+  margin-top: 12px;
   font-weight: 700;
-  
 }
 .info {
-  display: block;
- width: 200%;
-  height: 57px;
-  margin: 0 50px;
-  /* padding-left: 20px; */
-}
-
-.list-group-item {
-  width: 390px;
-  border: none;
-}
-.titleInfo {
-  display: block;
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-.titleList {
-  display: block;
-  list-style-type: none;
-}
-.titleList > ul {
-  display: block;
-  padding: 20px 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: calc(50% - 10px);
 }
 
 .deliveryinfo {
@@ -81,15 +48,23 @@
 }
 
 .minigray {
+  margin-top: 12px;
   font-size: 13px;
-  color: hsl(0, 0%, 0%, 0.3);
-  font-weight: 600;
+  line-height: 1.5;
+  color: #656565;
 }
 
-.discount {
+.minigray > span {
+  display: block;
+}
+
+.total .discount {
   color: #4dac27;
   font-weight: 700;
   font-size: 24px;
+  padding: 20px 0;
+  margin: 0;
+  border-bottom: 1px solid #eaeaea;
 }
 
 .event > button {
@@ -102,21 +77,43 @@
   color: hsl(0, 0%, 0%, 0.6);
 }
 
+.detail-bookinfo {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eaeaea;
+}
 .bookinfo {
-  padding: 20px 20px;
-  font-weight: 700;
-  border-top: 1px solid rgb(127, 145, 131, 0.4);
-  line-height: 2.2;
+  margin-top: 30px;
+  font-weight: 400;
 }
 .bookinfotitle {
-
+  border-top: 1px solid #eaeaea;
+  padding-top: 80px;
+  margin-top: 80px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1;
 }
-.point{
+.detail-menu {
+  padding: 0 !important;
+  height: 43px;
+  margin-top: 80px;
+  border-bottom: 1px solid #eaeaea;
+  background: #fff;
+}
+.detail-menu-item {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 0px;
+}
+.info .point {
+  font-weight: 700;
   display: flex;
   justify-content: space-between;
-  line-height: 5;
-  border-bottom: 1px solid rgba(137, 207, 186, 0.3);
-  
+  padding: 20px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+.point-price {
+  color: #4dac27;
+  font-weight: 700;
 }
