@@ -2,8 +2,9 @@ import Review from "../components/Review";
 import Goodinfo from "../components/Goodinfo";
 import instance from "../api/axios";
 import requests from "../api/request";
-import { useLocation } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import GoodNoInfo from "../components/GoodNoInfo";
 const Detail = () => {
   const location = useLocation();
   const paramList = new URLSearchParams(location.search);

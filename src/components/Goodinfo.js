@@ -2,7 +2,6 @@ import "../style/GoodInfo.css";
 import "../style/TopButton.css";
 import ConvertPrice from "../util/ConvertPrice";
 import ReplaceDate from "../util/ReplaceDate";
-
 const Goodinfo = (props) => {
   const detailInfo = props.detailInfo;
   const scrollToTop = () => {
@@ -38,15 +37,15 @@ const Goodinfo = (props) => {
             </button>
           </div>
           <div className="detail-bookinfo">
-            <h2 className="titleinfo">{detailInfo.title ? detailInfo.title : "No title"}</h2>
+            <h2 className="titleinfo">{detailInfo.title ? detailInfo.title : ""}</h2>
             <p className="minigray">
               <span>
                 {detailInfo.autherName} 저자(글)
                 {detailInfo.translatorName ? " · " + detailInfo.translatorName + " 번역" : ""}
               </span>
               <span>
-                {detailInfo.publisherName ? detailInfo.publisherName : "No publisherName"} ·{" "}
-                {detailInfo.regDt ? ReplaceDate(detailInfo.regDt) : "0000.00.00"}
+                {detailInfo.publisherName ? detailInfo.publisherName : ""} ·{" "}
+                {detailInfo.regDt ? ReplaceDate(detailInfo.regDt) : ""}
               </span>
             </p>
           </div>
@@ -57,18 +56,18 @@ const Goodinfo = (props) => {
               {detailInfo.discountPrice ? ConvertPrice(detailInfo.discountPrice) : "0"}원{"  "}
             </span>
             <span className="saleprice">
-              {detailInfo.price ? ConvertPrice(detailInfo.price) : "0"}원
+              {detailInfo.price ? ConvertPrice(detailInfo.price) : ""}원
             </span>
           </p>
           <div className="point">
             <span>적립</span>
             <span className="point-price">
-              {detailInfo.point ? ConvertPrice(detailInfo.point) : "0"}p
+              {detailInfo.point ? ConvertPrice(detailInfo.point) : ""}p
             </span>
           </div>
           <div className="point">
             <span>배송정보</span>
-            <span>{detailInfo.delivery ? detailInfo.delivery : "No delivery"}</span>
+            <span>{detailInfo.delivery ? detailInfo.delivery : ""}</span>
           </div>
           <div className="point">
             <span>리뷰평점</span>
@@ -79,9 +78,11 @@ const Goodinfo = (props) => {
           </div>
         </ul>
       </div>
+
       <div className="container detail-menu">
         <p className="detail-menu-item">상품 정보</p>
       </div>
+
       <div className="introdetail">
         {detailInfo.introImageUri ? (
           <img
