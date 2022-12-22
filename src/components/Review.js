@@ -4,7 +4,6 @@ import requests from "../api/request";
 import instance from "../api/axios";
 import Pagination from "react-js-pagination";
 import { useEffect, useState } from "react";
-
 const Review = (props) => {
   const [reviews, setReviews] = useState([]);
   const [reviewPage, setReviewPage] = useState(1);
@@ -34,7 +33,6 @@ const Review = (props) => {
   const handlePageChange = (page) => {
     setReviewPage(page);
   };
-
   return (
     <div className="container review">
       <div className="container review-menu">

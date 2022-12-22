@@ -2,6 +2,7 @@ import "../style/GoodInfo.css";
 import "../style/TopButton.css";
 import ConvertPrice from "../util/ConvertPrice";
 import ReplaceDate from "../util/ReplaceDate";
+
 const Goodinfo = (props) => {
   const detailInfo = props.detailInfo;
   const scrollToTop = () => {
@@ -78,11 +79,9 @@ const Goodinfo = (props) => {
           </div>
         </ul>
       </div>
-
       <div className="container detail-menu">
         <p className="detail-menu-item">상품 정보</p>
       </div>
-
       <div className="introdetail">
         {detailInfo.introImageUri ? (
           <img
@@ -94,7 +93,6 @@ const Goodinfo = (props) => {
         ) : (
           ""
         )}
-
         <p className="bookinfotitle">책소개</p>
         <p className="bookinfo"> {detailInfo.textIntroduce}</p>
       </div>

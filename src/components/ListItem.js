@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
 import ConvertPrice from "../util/ConvertPrice";
-
-import "../style/TopButton.css";
 import ReplaceDate from "../util/ReplaceDate";
+import "../style/TopButton.css";
+import { Link } from "react-router-dom";
+
 const ListItem = (props) => {
   const bookInfo = props.bookinfo;
   const scrollToTop = () => {
@@ -11,7 +11,6 @@ const ListItem = (props) => {
       behavior: "smooth",
     });
   };
-  // 작가 이름 처리
   let authorName = "";
   if (bookInfo.autherName.includes(",")) {
     const [firstAuthorName] = bookInfo.autherName.split(",");
@@ -28,7 +27,6 @@ const ListItem = (props) => {
             src={`http://haeji.mawani.kro.kr:8181/image/cover/${bookInfo.coverImageUri}`}
           />
         </Link>
-
         <div className="list-txtbox">
           <p className="rank-box"> {bookInfo.rank} </p>
           <p className="title">
@@ -49,9 +47,7 @@ const ListItem = (props) => {
             <p className="dc-price"> {ConvertPrice(bookInfo.price)}원 </p>
             <p className="point"> {bookInfo.point ? ConvertPrice(bookInfo.point) : "0"}p </p>
           </div>
-
           <span className="list-review">{bookInfo.textIntroduce}</span>
-
           <div className="list-score">
             <img className="clover-img" src={"/ico_clover.png"} />
             <p className="clover-score"> {bookInfo.score ? bookInfo.score : "0"}</p>
@@ -68,7 +64,6 @@ const ListItem = (props) => {
       </div>
       <div className="scroll__container">
         <button id="top" onClick={scrollToTop} type="button">
-          {" "}
           Top
         </button>
       </div>

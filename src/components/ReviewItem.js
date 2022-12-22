@@ -8,7 +8,6 @@ const ReviewItem = (props) => {
     </span>
   ));
   const [reviewDate, reviewTime] = reviewData.reviewDate.split(" ");
-
   return (
     <li className="list-group-item review-item">
       <p className="review-info">

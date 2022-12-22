@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Detail from "./pages/Detail";
 import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+
 const App = () => {
   return (
     <Router>
@@ -19,4 +20,5 @@ const App = () => {
     </Router>
   );
 };
+
 export default App;

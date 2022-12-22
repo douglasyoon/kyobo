@@ -14,7 +14,6 @@ const List = () => {
     };
     const resultList = await instance.get(requests.fetchList, { params });
     const item = resultList.data.list.content;
-
     const { totalPages, totalElements, size } = resultList.data.list;
     setBookList(item);
     setListPageInfo({ totalPages, totalElements, size });
@@ -28,7 +27,6 @@ const List = () => {
   const handlePageChange = (page) => {
     setListPage(page);
   };
-
   return (
     <div>
       <ul>{list}</ul>
