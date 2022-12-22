@@ -1,10 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap");
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url("./style/Header.css");
 @import url("./style/GoodInfo.css");
 @import url("./style/listitem.css");
 @import url("./style/review.css");
 @import url("./style/pagination.css");
+* {
+  margin: 0;
+  padding: 0;
+}
 a {
   color: #000;
   text-decoration: none;
@@ -20,10 +24,9 @@ html {
   text-decoration: none;
 }
 body {
-  margin: 0;
-  padding: 0;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "Roboto", "Noto Sans KR", sans-serif;
   color: #000;
 }

@@ -62,7 +62,6 @@
 .event > button {
   font-size: 9px;
   font-weight: 700;
-  border: none;
   margin: 0 3px;
   border-radius: 10%;
   background: hsl(126, 36%, 84%, 0.6);
@@ -96,11 +95,11 @@
 .detail-menu-item {
   display: inline-block;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   padding: 10px 0px;
 }
 .info .point {
-  font-weight: 700;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   padding: 20px 0;
@@ -108,5 +107,5 @@
 }
 .point-price {
   color: #4dac27;
-  font-weight: 700;
+  font-weight: 500;
 }

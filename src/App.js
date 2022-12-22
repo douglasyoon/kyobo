@@ -1,10 +1,12 @@
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Detail from "./pages/Detail";
+import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="container">
         <Header />
         <Routes>

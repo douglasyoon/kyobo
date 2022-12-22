@@ -13,10 +13,10 @@ const ReviewItem = (props) => {
     <li className="list-group-item review-item">
       <p className="review-info">
         <span>{star}</span>
-        <span>{reviewData.memberId}</span>{" "}
+        <span>{reviewData.memberId ? reviewData.memberId : "ID"}</span>{" "}
         <span>{reviewDate ? ReplaceDate(reviewDate) : "0000.00.00"}</span>
       </p>
-      <p className="review-content">{reviewData.reviewContent}</p>
+      <p className="review-content">{reviewData.reviewContent ? reviewData.reviewContent : ""}</p>
     </li>
   );
 };
