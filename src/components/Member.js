@@ -6,7 +6,7 @@ const Member = () => {
   return (
     <div className="container list-box about-member">
       <Link to="/home">
-        <button type="button" className="btn btn-success">
+        <button type="button" className="btn-1 btn-success">
           HOME
         </button>
       </Link>
