@@ -45,13 +45,6 @@
   right: 5%;
   bottom: 5%;
   z-index: 1;
-  width: 80px;
-  height: 30px;
-  border-radius: 50%;
-  border: none;
-  font-weight: 500;
-  background: green;
-  color: #fff;
 }
 .card-body {
   text-align: center;
