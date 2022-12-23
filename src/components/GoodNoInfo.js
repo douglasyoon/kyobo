@@ -13,3 +13,4 @@ const GoodNoInfo = () => {
 };
 
 export default GoodNoInfo;
+
